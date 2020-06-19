@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+
+<body class="">
+    <section class="section">
+        <div class="container">
+            <nav class="navbar" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="./index.html" class="navbar-item">
+                        <h1 class="is-size-4 mb-6">&lt;Alex Chadwick&gt;</Alex>
+                        </h1>
+                    </a>
+
+                    <a role="button" id="burger-navbar" class="navbar-burger burger" aria-label="menu"
+                        aria-expanded="false" data-target="navbarBasicExample" onclick="displayNavbarMobile()">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="./index.html" class="navbar-item">Home</a>
+                        <a href="./repos.html" class="navbar-item">Projects</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="content" id="content">
+                <section class="is-hero is-link">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">List of my projects</h1>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    </section>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/repos.js" defer></script>
+</body>
+
+</html>

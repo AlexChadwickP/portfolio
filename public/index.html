@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+</head>
+
+<body class="">
+    <section class="section">
+        <div class="container">
+            <nav class="navbar" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="./index.html" class="navbar-item">
+                        <h2 class="is-size-4 mb-6">&lt;Alex Chadwick&gt;</h2>
+                    </a>
+
+                    <a role="button" id="burger-navbar" class="navbar-burger burger" aria-label="menu"
+                        aria-expanded="false" data-target="navbarBasicExample" onclick="displayNavbarMobile()">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbar" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="./index.html" class="navbar-item">Home</a>
+                        <a href="./repos.html" class="navbar-item">Projects</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="content">
+                <h1>Hi! I'm Alex Chadwick</h1>
+                <h3>A web and software developer based in the United Kingdom</h3>
+                <p>
+                    I'm Alex, I'm 17 years old and I'm based in the United Kingdom, near the city of Cambridge.
+                    I am currently studying Media Studies, Computer Science and Music Technology A levels at college.
+                    I'm able to produce professional websites using modern technologies and frameworks, and providing
+                    clean code
+                </p>
+                <section class="hero is-primary mb-6">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Web Technologies
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+                <h4>HTML</h4>
+                <progress class="progress is-primary" value="95" max=100></progress>
+                <h4>CSS</h4>
+                <progress class="progress is-primary" value="75" max=100></progress>
+                <h4>LESS</h4>
+                <progress class="progress is-primary" value="60" max=100></progress>
+                <h4>Javascript</h4>
+                <progress class="progress is-primary" value="70" max=100></progress>
+                <h4>NodeJS</h4>
+                <progress class="progress is-primary" value="70" max=100></progress>
+
+                <section class="hero is-info mb-6">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Software Technologies
+                            </h1>
+                        </div>
+                    </div>
+                </section>
+                <h4>C++</h4>
+                <progress class="progress is-info" value="60" max="100"></progress>
+                <h4>Rust</h4>
+                <progress class="progress is-info" value="75" max="100"></progress>
+                <h4>Java</h4>
+                <progress class="progress is-info" value="75" max="100"></progress>
+                <h4>Python</h4>
+                <progress class="progress is-info" value="75" max="100"></progress>
+                <h4>C#</h4>
+                <progress class="progress is-info" value="80" max="100"></progress>
+            </div>
+            <div class="modal is-active" id="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">
+                            USE CODE <span style="font-family: monospace">FIRST25</span> FOR 25% OFF
+                        </p>
+                    </header>
+                </div>
+                <button class="modal-close is-large" aria-label="close" onclick="toggleModal()"></button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/cookies.js" defer></script>
+</body>
+
+</html>
