@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@ac/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Link from 'next/link'
+import { PropsWithChildren } from 'react'
 
 export default function Home() {
   return (
@@ -14,110 +11,81 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <div>
+      <aside className='flex-col hidden lg:flex lg:w-[10%] bg-blue-200 p-4 fixed h-full text-center'>
+        <Link href='#about' className='font-serif hover:underline text-lg'>About me</Link>
+        <Link href='#projects' className='font-serif hover:underline text-lg'>Projects</Link>
+      </aside>
+      <main className='bg-white float-right lg:pl-[10%]'>
+        <section className='p-16'>
+          <h1 className='font-serif text-3xl font-bold'>Alex Chadwick</h1>
+          <h3 className='font-serif text-gray-800'>Full Stack Web Developer</h3>
+          <p className='font-serif text-gray-500 text-xs'>Cambridge, United Kingdom</p>
+        </section>
+        <section className='p-16 bg-gray-300' id='about'>
+          <h1 className='font-serif text-3xl font-bold'>About me</h1>
+          <p className='font-serif mt-1'>Having worked over the last 17 months on internal tooling for our teams, I have been able to refine my communication skills in order to efficiently and easily extract requirements from the end users.</p>
+          <p className='font-serif mt-1'>I take pride in my eagerness and ability to learn and adapt to new environments. It is thanks to this that I have been able to get to where I am today.</p>
+          <p className='font-serif mt-1'>I enjoy reading about code calisthenics and also partake in discussions about these and good practices,
+          as I often find that the best code, is the code that is written for developers to build on.
+          In fact, I often talk about these topics in blog articles, that I have written both on my personal Hashnode blog
+          (which is being migrated over to this site) and for <a href='https://unicorn-utterances.com/unicorns/alexchadwick'>Unicorn Utterances</a>.</p>
+        </section>
+        <section className='p-16 bg-gray-200' id='projects'>
+          <h1 className='font-serif text-3xl font-bold'>Projects</h1>
+          <p className='font-serif mt-1'>These projects are the ones that I am actively working on or most proud of:</p>
+          <div className='grid lg:grid-cols-3 gap-6 mt-2'>
+            <ProjectCard title='Brontobase' link='https://github.com/AlexChadwickP/brontobase'>
+              <p className='font-serif'>
+                Brontobase is a simple alternative to Supabase and PocketBase, aimed to be simplistic, easy to setup and with a small learning curve. This comes
+                at the cost of customizability, but it is not intended for complex projects or scalability, but rather for beginners, small projects and prototyping
+              </p>
+              <hr className='m-2' />
+              <p className='font-serif'>Tech stack:</p>
+              <ul className='list-disc list-inside'>
+                <li className='font-serif'>SQLite database</li>
+                <li className='font-serif'>TypeScript</li>
+                <li className='font-serif'>Deno runtime</li>
+                <li className='font-serif'>Oak web framework</li>
+              </ul>
+            </ProjectCard>
+            <ProjectCard title='ProgLang' link='https://github.com/AlexChadwickP/proglang'>
+              <p className='font-serif'>
+                ProgLang started out as an attempt to implement Forth in Rust, and then I started designing the language myself. It is very early, and the objective of
+                this project is to learn how a programming language works, rather than inventing a new general purpose language
+              </p>
+              <hr className='m-2' />
+              <p className='font-serif'>Tech stack:</p>
+              <ul className='list-disc list-inside'>
+                <li className='font-serif'>Rust</li>
+                <li className='font-serif'>Cargo</li>
+              </ul>
+            </ProjectCard>
+            <ProjectCard title='CLI Text Editor in C' link='https://github.com/AlexChadwickP/proglang'>
+              <p className='font-serif'>
+                A very simple CLI text editor written in C
+              </p>
+              <hr className='m-2' />
+              <p className='font-serif'>Tech stack:</p>
+              <ul className='list-disc list-inside'>
+                <li className='font-serif'>C</li>
+                <li className='font-serif'>Make</li>
+              </ul>
+            </ProjectCard>
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        </section>
       </main>
+      </div>
     </>
   )
+}
+
+const ProjectCard = ({ title, link, children }: PropsWithChildren & { title: string, link: string }) => {
+  return <div className='shadow-md p-4 bg-white'>
+    <h3 className='font-serif font-bold text-xl'>{title}</h3>
+    <div className='p-2'>
+      {children}
+    </div>
+    <a href={link} className='px-2 py-1 bg-gray-300 hover:bg-gray-200 font-serif'>Repository</a>
+  </div>
 }
