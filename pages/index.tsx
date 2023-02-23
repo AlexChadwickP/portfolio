@@ -108,7 +108,7 @@ export default function Home({ posts }: any) {
                 title="CLI Text Editor in C"
                 link="https://github.com/AlexChadwickP/proglang"
               >
-                <p >
+                <p>
                   A very simple CLI text editor written in C
                 </p>
                 <hr className="m-2" />
@@ -116,6 +116,23 @@ export default function Home({ posts }: any) {
                 <ul className="list-disc list-inside">
                   <li >C</li>
                   <li >Make</li>
+                </ul>
+              </ProjectCard>
+              <ProjectCard
+                title="This portfolio web page!"
+                link="https://github.com/AlexChadwickP/portfolio">
+                <p>
+                  A portfolio site with projects and a blog.
+                </p>
+                <hr className="m-2" />
+                <p >Tech stack:</p>
+                <ul className="list-disc list-inside">
+                  <li>Next.JS</li>
+                  <li>React</li>
+                  <li>TailwindCSS</li>
+                  <li>Vercel</li>
+                  <li>TypeScript</li>
+                  <li>Markdown</li>
                 </ul>
               </ProjectCard>
             </div>
