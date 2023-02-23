@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown";
 
 export default function BlogPost({ content, frontmatter }: any) {
   return <div className='w-full flex justify-center'>
-    <div className='lg:w-1/3 py-10 prose prose-headings:font-serif prose-p:font-serif prose-a:font-serif'>
+    <div className='lg:w-1/3 py-10 prose'>
         <h1>{frontmatter.title}</h1>
         <ReactMarkdown>{content}</ReactMarkdown>
     </div>

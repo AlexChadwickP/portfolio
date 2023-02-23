@@ -13,37 +13,40 @@ export default function Home({ posts }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <aside className="flex-col hidden lg:flex lg:w-[10%] bg-blue-200 p-4 fixed h-full text-center">
-          <Link href="#about" className="font-serif hover:underline text-lg">
+        <aside className="flex-col font-bold text-white hidden lg:flex lg:w-[10%] bg-blue-500 p-4 fixed h-full text-center">
+          <Link href="#about" className="hover:underline text-lg">
             About me
           </Link>
-          <Link href="#projects" className="font-serif hover:underline text-lg">
+          <Link href="#projects" className="hover:underline text-lg">
             Projects
+          </Link>
+          <Link href="#posts" className="hover:underline text-lg">
+            Blog
           </Link>
         </aside>
         <main className="bg-white float-right lg:pl-[10%]">
           <section className="p-16">
-            <h1 className="font-serif text-3xl font-bold">Alex Chadwick</h1>
-            <h3 className="font-serif text-gray-800">
+            <h1 className="text-3xl font-bold">Alex Chadwick</h1>
+            <h3 className="text-gray-800">
               Full Stack Web Developer
             </h3>
-            <p className="font-serif text-gray-500 text-xs">
+            <p className="text-gray-500 text-xs">
               Cambridge, United Kingdom
             </p>
           </section>
           <section className="p-16 bg-gray-300" id="about">
-            <h1 className="font-serif text-3xl font-bold">About me</h1>
-            <p className="font-serif mt-1">
+            <h1 className="text-3xl font-bold">About me</h1>
+            <p className="mt-1">
               Having worked over the last 17 months on internal tooling for our
               teams, I have been able to refine my communication skills in order
               to efficiently and easily extract requirements from the end users.
             </p>
-            <p className="font-serif mt-1">
+            <p className="mt-1">
               I take pride in my eagerness and ability to learn and adapt to new
               environments. It is thanks to this that I have been able to get to
               where I am today.
             </p>
-            <p className="font-serif mt-1">
+            <p className="mt-1">
               I enjoy reading about code calisthenics and also partake in
               discussions about these and good practices, as I often find that
               the best code, is the code that is written for developers to build
@@ -57,8 +60,8 @@ export default function Home({ posts }: any) {
             </p>
           </section>
           <section className="p-16 bg-gray-200" id="projects">
-            <h1 className="font-serif text-3xl font-bold">Projects</h1>
-            <p className="font-serif mt-1">
+            <h1 className="text-3xl font-bold">Projects</h1>
+            <p className="mt-1">
               These projects are the ones that I am actively working on or most
               proud of:
             </p>
@@ -67,7 +70,7 @@ export default function Home({ posts }: any) {
                 title="Brontobase"
                 link="https://github.com/AlexChadwickP/brontobase"
               >
-                <p className="font-serif">
+                <p >
                   Brontobase is a simple alternative to Supabase and PocketBase,
                   aimed to be simplistic, easy to setup and with a small
                   learning curve. This comes at the cost of customizability, but
@@ -75,19 +78,19 @@ export default function Home({ posts }: any) {
                   rather for beginners, small projects and prototyping
                 </p>
                 <hr className="m-2" />
-                <p className="font-serif">Tech stack:</p>
+                <p >Tech stack:</p>
                 <ul className="list-disc list-inside">
-                  <li className="font-serif">SQLite database</li>
-                  <li className="font-serif">TypeScript</li>
-                  <li className="font-serif">Deno runtime</li>
-                  <li className="font-serif">Oak web framework</li>
+                  <li >SQLite database</li>
+                  <li >TypeScript</li>
+                  <li >Deno runtime</li>
+                  <li >Oak web framework</li>
                 </ul>
               </ProjectCard>
               <ProjectCard
                 title="ProgLang"
                 link="https://github.com/AlexChadwickP/proglang"
               >
-                <p className="font-serif">
+                <p >
                   ProgLang started out as an attempt to implement Forth in Rust,
                   and then I started designing the language myself. It is very
                   early, and the objective of this project is to learn how a
@@ -95,24 +98,24 @@ export default function Home({ posts }: any) {
                   general purpose language
                 </p>
                 <hr className="m-2" />
-                <p className="font-serif">Tech stack:</p>
+                <p >Tech stack:</p>
                 <ul className="list-disc list-inside">
-                  <li className="font-serif">Rust</li>
-                  <li className="font-serif">Cargo</li>
+                  <li >Rust</li>
+                  <li >Cargo</li>
                 </ul>
               </ProjectCard>
               <ProjectCard
                 title="CLI Text Editor in C"
                 link="https://github.com/AlexChadwickP/proglang"
               >
-                <p className="font-serif">
+                <p >
                   A very simple CLI text editor written in C
                 </p>
                 <hr className="m-2" />
-                <p className="font-serif">Tech stack:</p>
+                <p >Tech stack:</p>
                 <ul className="list-disc list-inside">
-                  <li className="font-serif">C</li>
-                  <li className="font-serif">Make</li>
+                  <li >C</li>
+                  <li >Make</li>
                 </ul>
               </ProjectCard>
             </div>
@@ -121,10 +124,10 @@ export default function Home({ posts }: any) {
             <section id="posts" className="p-16 bg-gray-300 grid grid-cols-1 gap-4">
               {posts.map((post: any) => (
                 <article key={post.slug} className='bg-white py-4 px-10'>
-                  <Link href={`blog/${post.slug}`} className="font-serif text-2xl font-bold hover:underline">
+                  <Link href={`blog/${post.slug}`} className="text-2xl font-bold hover:underline">
                     {post.frontmatter.title}
                   </Link>
-                  <p className='font-serif text-gray-800 text-lg'>{post.frontmatter.description}</p>
+                  <p className='text-gray-800 text-lg'>{post.frontmatter.description}</p>
                 </article>
               ))}
             </section>
@@ -141,12 +144,12 @@ const ProjectCard = ({
   children,
 }: PropsWithChildren & { title: string; link: string }) => {
   return (
-    <div className="shadow-md p-4 bg-white">
-      <h3 className="font-serif font-bold text-xl">{title}</h3>
+    <div className="shadow-md p-4 bg-white rounded-lg">
+      <h3 className="font-bold text-xl">{title}</h3>
       <div className="p-2">{children}</div>
       <a
         href={link}
-        className="px-2 py-1 bg-gray-300 hover:bg-gray-200 font-serif"
+        className="px-2 py-1 bg-blue-500 hover:bg-blue-400 text-white rounded-md"
       >
         Repository
       </a>
