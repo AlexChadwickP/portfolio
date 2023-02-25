@@ -140,7 +140,7 @@ export default function Home({ posts }: any) {
           {!!posts && (
             <section id="posts" className="p-16 bg-gray-300 grid grid-cols-1 gap-4">
               {posts.map((post: any) => (
-                <article key={post.slug} className='bg-white py-4 px-10'>
+                <article key={post.slug} className='bg-white py-6 px-10 rounded-lg'>
                   <Link href={`blog/${post.slug}`} className="text-2xl font-bold hover:underline">
                     {post.frontmatter.title}
                   </Link>
